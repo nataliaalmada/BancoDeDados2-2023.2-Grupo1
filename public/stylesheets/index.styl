@@ -1,0 +1,82 @@
+$black = #111313
+$gray = #4e4e4d
+$darker-brown = #382f37
+$deep-red = #611f3d
+$dark-brown = #3e0202
+$medium-red = #6b153e
+$very-deep-red = #270412
+$white = #d6d2d2
+//$white = #ffffff
+//$deep-grey = #1b1c1c
+//$medium-grey = #2c3839
+//$light-grey = #cbc6c6
+//$dark-red = #9b1529
+//$pink = #fb94bd
+
+body
+    min-height 100vh
+    color $white
+    background-color $black
+    font-family 'Rubik', sans-serif
+
+header
+    height 60px
+    overflow hidden
+    background-color $very-deep-red
+
+.navbar span
+    color $black
+
+.navbar img
+    width 40px
+    height 40px
+    object-fit cover
+    object-position center
+    box-shadow 0 0 40px 5px $medium-red
+    border-radius 50%
+
+.navbar-nav .active
+    text-decoration underline
+    text-decoration-color $darker-brown
+
+.greetings
+    color $black
+    border-right 1px solid $black
+/*3e0202;
+  border-color: #1c0106*/
+.btn-primary
+    background-color $dark-brownbrown
+    border-color $dark-brown
+
+main
+    min-height 100vh
+    margin 30px 0
+
+.card
+    border none
+
+.list-group-item-light
+    color $deep-red
+
+.card-body
+    flex none
+
+table
+    border-radius var(--bs-border-radius)
+    overflow hidden
+
+.table > :not(caption) > * > *
+    border-bottom none
+
+td img
+    width 40px
+    height 40px
+
+tr td
+    margin: auto 0
+
+footer
+     width: 100vw;
+     height: 28px;
+     font-size: 0.7rem;
+     background-color: #523399

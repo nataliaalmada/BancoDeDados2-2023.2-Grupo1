@@ -1,0 +1,17 @@
+h1 {
+  margin: 0;
+  color: #032929;
+}
+a {
+  color: #993374;
+}
+.auth {
+  width: 20%;
+  color: #4a337d;
+  border-radius: 1rem;
+  background-color: #fffafb;
+}
+.auth span {
+  font-size: 0.9rem;
+  color: #ba96b8;
+}

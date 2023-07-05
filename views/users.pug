@@ -1,0 +1,35 @@
+extends layout
+
+block head
+  link(rel="stylesheet", href="/stylesheets/users.css")
+
+block content
+  main(class="container d-flex align-items-center justify-content-center")
+    table.table.table-striped.w-75
+      thead
+        tr
+          th.col Image
+          th.col Name
+          th.col Role
+          th.col Email
+          th.col.text-center Actions
+      tbody
+        each user in users
+          - const status = user.status === 'Active' ? 'dark' : 'primary'
+
+          tr(class=`align-middle${user.status === 'Active' ? '' : ' table-dark'}`)
+            td
+              img(src=user.image, alt=user.name)
+            td #{user.name}
+            td #{user.role}
+            td #{user.email}
+            td
+              .d-flex.justify-content-center
+                if role === "root" && user.role === 'Student' && user.status === 'Active'
+                  form(action=`/users/upgrade/${user.id}?_method=PUT`, method="POST")
+                    button(type="submit", class="btn btn-warning btn-sm me-2")
+                      i.bx.bx-crown
+                if (user.role === 'Student') || (role === "root" && user.role !== 'Root')
+                  form(action=`/users/suspend/${user.id}?_method=PUT`, method="POST")
+                    button(type="submit", class=`btn btn-${status} btn-sm`)
+                      i.bx.bx-power-off

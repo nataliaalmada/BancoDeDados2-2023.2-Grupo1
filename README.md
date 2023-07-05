@@ -1,41 +1,30 @@
-<h2 align="center"> Projeto Final de Banco de Dados II - 2023.2 - Grupo 1 </h2>
-<h2 align="center"> Sistema de Gerenciamento de Cursos </h2>
+# Sistema de Gestão de Cursos (SGC)
 
-Trabalho realizado para obtenção de nota na disciplina DCC603 - BANCO DE DADOS II
-## ✒️ Autores
+Projeto final para a disciplina de Banco de Dados II, ministrada pelo [Prof. Acauan Ribeiro](https://github.com/acauanrr).
 
-* **João Roberto** - *Desenvolvedor Backend* 
-* **Matheus Melo** - *Desenvolvedor Backend* 
-* **Natália Almada** - *Desenvolvedor Frontend*
-* **Ramsés Carvalho** - *Desenvolvedor Frontend* 
+## Descrição
 
-### 📋 Pré-requisitos
-* 1 Sistema deve conter autenticação/autorização com Login e Cadastro de Usuários
-* 2 Usuário root (criado junto ao criação das tabelas) do sistema que pode dar permissão para novos usuários tipo admin
+O SGC é um sistema de gestão de cursos que permite a criação de cursos, matrícula de alunos, avaliação de cursos e certificação de alunos. O sistema possui um banco de dados relacional PostgreSQL que armazena as informações de cursos, alunos e certificados. Os certificados são armazenados na blockchain, em uma rede de teste hospedada pela Ethereum, que é utilizada para garantir a autenticidade dos certificados emitidos.
 
-* 3 Usuário admin pode cadastrar/alterar/deletar novas categorias de curso;
-  * 3.1 Usuário admin pode cadastrar/alterar/deletar novos cursos;
-  * 3.2 Usuário admin pode suspender conta de usuário aluno;
-  * 3.3 Tem acesso a listagem dos alunos;
-  * 3.4 Faz a rotina de “fechar” um curso, emitindo certificados para quem terminou mais de 90% da carga horária;
-  
-* 4 Usuário aluno pode se cadastrar no sistema
-  * 4.1 Usuário aluno pode alterar seu próprio perfil (atualizar endereço, celular, foto do perfil);
-  * 4.2 Usuário aluno pode se inscrever nos cursos disponíveis no sistema;
+## Tecnologias utilizadas
 
-* 5 Cursos devem estar vinculados a somente uma categoria de cursos;
-  * 5.1 Categorias de cursos podem conter vários cursos vinculados a ela;
-  * 5.2 Curso deve ter (id, nome_do_curso, categoria_curso(FK), data_inicio, carga_horária, quantidade_inscritos);
+- Node.js
+- Express.js
+- Blockchain
+- Banco de dados PostgreSQL
 
-* 6 Certificados são emitidos seguindo algum critério de validação do aluno. Exemplo:
- * - Aluno terminou de responder um questionário e acertou > 70% E/OU
- * - Quando o aluno termina mais de 90% da carga horária do curso.
-    * 6.1 Para essa versão do sistema quem lança a carga horária do aluno é algum perfil admin do sistema
+## Como executar
 
-* 7 Sistema de emissão e controle dos certificados implementado utilizando Blockchain (desafio!)
+Esse projeto precisa de algumas dependências antes de ser utilizados, tais como:
 
-* 8 O sistema deve ser publicado na AWS (deploy da aplicação em uma instância EC2). Seguindo os passos vistos em aula.
+- `node >= 18.11.0`
+- `npm >= 6.14.0`
+- `postgresql >= 13.3`
+- Truffle
+- Ganache
 
-## 🛠️ Construído com:
+1. Clone o repositório
+2. Instale as dependências com `npm install`
+3. Crie um arquivo `.env` na raiz do projeto e preencha com as variáveis de ambiente necessárias (veja o arquivo `.env.example` para mais detalhes)
+4. Execute o projeto com `npm start`
 
-* [VS Code](https://code.visualstudio.com) - IDE de desenvolvimento
